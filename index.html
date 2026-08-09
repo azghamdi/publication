@@ -5809,6 +5809,39 @@ body .publication-tabs>.publication-tabs__inner{
 }
 @media(max-width:700px){body .publication-tabs{display:block!important;width:calc(100% - 20px)!important;overflow-x:auto!important}body .publication-tabs>.publication-tabs__inner{width:max-content!important}}
 </style>
+<style id="newsletter-tabs-indicator-identity">
+body .publication-tabs{background:#fff!important;border:0!important;border-bottom:1px solid #dce7e1!important;box-shadow:0 5px 16px rgba(18,63,44,.05)!important}
+body .publication-tabs .publication-tabs__inner{gap:4px!important;padding-inline:4px!important}
+body .publication-tabs .publication-tab{position:relative!important;min-height:58px!important;padding:10px 14px 12px!important;border:0!important;border-radius:8px 8px 0 0!important;background:transparent!important;color:#172d24!important;display:inline-flex!important;align-items:center!important;gap:8px!important;font-weight:700!important;transition:background-color .16s ease,color .16s ease!important}
+body .publication-tabs .publication-tab::after{content:"";position:absolute;right:10px;left:10px;bottom:0;height:3px;border-radius:3px 3px 0 0;background:transparent;transition:background-color .16s ease,right .16s ease,left .16s ease}
+body .publication-tabs .publication-tab:hover,body .publication-tabs .publication-tab:focus-visible{background:#f3f8f5!important;color:#087a4d!important;outline:none!important}
+body .publication-tabs .publication-tab:hover::after{background:#161616;right:7px;left:7px}
+body .publication-tabs .publication-tab.is-active{background:#eef7f2!important;color:#087a4d!important;box-shadow:none!important}
+body .publication-tabs .publication-tab.is-active::after,body .publication-tabs .publication-tab.is-active:hover::after{background:#148357;right:7px;left:7px}
+.newsletter-tab-icon{width:31px;height:31px;border:1px solid #d2e7dc;border-radius:9px;background:#eaf6f0;display:grid;place-items:center;flex:0 0 auto;color:#148357;transition:background-color .16s ease,color .16s ease,border-color .16s ease}
+.newsletter-tab-icon svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+body .publication-tabs .publication-tab:hover .newsletter-tab-icon,body .publication-tabs .publication-tab:focus-visible .newsletter-tab-icon{background:#fff;border-color:#aad1bd;color:#087a4d}
+body .publication-tabs .publication-tab.is-active .newsletter-tab-icon{background:#148357;border-color:#148357;color:#fff}
+@media(max-width:700px){body .publication-tabs .publication-tab{min-height:52px!important;padding:8px 11px 10px!important;font-size:.84rem!important}.newsletter-tab-icon{width:28px;height:28px}.newsletter-tab-icon svg{width:18px;height:18px}}
+</style>
+<script id="newsletter-tabs-indicator-icons">
+(function(){
+ var icons={
+  'أبرز النقاط':'<path d="M7 3.5h8l4 4V21H7z"/><path d="M15 3.5V8h4M10 12h6M10 16h6"/>',
+  'البيانات والجداول':'<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M9 4v16M15 4v16"/>',
+  'ملخص المنهجية':'<path d="M12 3l7 3v5c0 4.5-2.6 7.8-7 10-4.4-2.2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-5"/>',
+  'المنهجية والجودة':'<path d="M12 3l7 3v5c0 4.5-2.6 7.8-7 10-4.4-2.2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-5"/>',
+  'الاقتباس والتواصل':'<path d="M7 7h4v5H8.5v5H5v-7a3 3 0 0 1 2-3zM17 7h2v5h-2.5v5H13v-7a3 3 0 0 1 4-3z"/>',
+  'الجداول':'<rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M9 4v16M15 4v16"/>',
+  'لوحات المعلومات':'<rect x="3" y="4" width="7" height="7" rx="1"/><rect x="14" y="4" width="7" height="7" rx="1"/><rect x="3" y="15" width="7" height="6" rx="1"/><path d="M15 20v-5M18 20v-8M21 20v-3"/>',
+  'الإصدارات':'<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v5h4M9 12h7M9 16h7"/>',
+  'الأخبار':'<path d="M4 5h16v14H4z"/><path d="M8 9h4v4H8zM14 9h3M14 12h3M8 16h9"/>'
+ };
+ function addIcons(){var tabs=document.querySelectorAll('.publication-tabs .publication-tab');if(!tabs.length){setTimeout(addIcons,120);return}tabs.forEach(function(tab){if(tab.querySelector('.newsletter-tab-icon'))return;var label=tab.textContent.replace(/\s+/g,' ').trim();var path=icons[label];if(!path)return;var icon=document.createElement('span');icon.className='newsletter-tab-icon';icon.setAttribute('aria-hidden','true');icon.innerHTML='<svg viewBox="0 0 24 24">'+path+'</svg>';tab.prepend(icon)})}
+ function start(){addIcons();var root=document.querySelector('.publication-tabs__inner');if(root)new MutationObserver(addIcons).observe(root,{childList:true,subtree:true})}
+ if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
+</script>
 </body>
 <style id="cross-device-compatibility-v1">
 /* Final cross-device hardening: phones, tablets, laptops and wide screens. */
