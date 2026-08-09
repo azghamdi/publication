@@ -5274,7 +5274,7 @@ document.addEventListener("DOMContentLoaded",function(){
   hero.innerHTML='<div class="compact-publication-hero__content"></div><div class="compact-publication-hero__actions"><button class="compact-publication-hero__button compact-publication-hero__button--share" type="button" data-hero-share><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg><span>مشاركة</span></button><button class="compact-publication-hero__button" type="button" data-hero-print><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V4h10v4M7 17H5a2 2 0 0 1-2-2v-5h18v5a2 2 0 0 1-2 2h-2M7 14h10v6H7z"/></svg><span>طباعة</span></button></div>';
   var content=hero.querySelector('.compact-publication-hero__content');
   if(path)content.appendChild(path);
-  content.insertAdjacentHTML('beforeend','<h1 class="compact-publication-hero__title">الرقم القياسي لأسعار العقارات – الربع الثاني 2026</h1><p class="compact-publication-hero__product">صفحة المؤشر: الرقم القياسي لأسعار العقارات</p><div class="compact-publication-hero__meta"><span>تاريخ النشر: 20 يوليو 2026، الساعة 9:00 صباحًا</span><span>النشرة القادمة: 20 أكتوبر 2026 — الربع الثالث 2026</span><span>تحديث ربع سنوي</span><a class="compact-publication-hero__previous" href="https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&amp;category=121920"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M5 12h9a5 5 0 0 1 5 5"/></svg><span>الرجوع للنشرات السابقة</span></a></div>');
+content.insertAdjacentHTML('beforeend','<h1 class="compact-publication-hero__title">الرقم القياسي لأسعار العقارات – الربع الثاني 2026</h1><p class="compact-publication-hero__product"><a class="publication-clear-link" href="https://azghamdi.github.io/indicator/" target="_blank" rel="noopener noreferrer">صفحة المؤشر: الرقم القياسي لأسعار العقارات <span aria-hidden="true">←</span></a></p><div class="compact-publication-hero__meta"><span>تاريخ النشر: 20 يوليو 2026، الساعة 9:00 صباحًا</span><span>النشرة القادمة: 20 أكتوبر 2026 — الربع الثالث 2026</span><span>تحديث ربع سنوي</span><a class="compact-publication-hero__previous" href="https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&amp;category=121920"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M5 12h9a5 5 0 0 1 5 5"/></svg><span>الرجوع للنشرات السابقة</span></a></div>');
   container.appendChild(hero);
   hero.querySelector('[data-hero-print]').addEventListener('click',function(){window.print()});
   hero.querySelector('[data-hero-share]').addEventListener('click',function(){
@@ -5450,7 +5450,7 @@ document.addEventListener("DOMContentLoaded",function(){
  function replaceMethodologyContent(){
   var panel=document.getElementById('methodologyPanel');
   if(!panel)return false;
-  panel.innerHTML='<div class="methodology-minimal-summary"><p>يقيس الرقم القياسي تغير أسعار الصفقات العقارية المسجلة موزعة على ثلاثة قطاعات — سكني وتجاري وزراعي — ومرجحة بأوزان الصفقات، وسنة الأساس 2023 = 100.</p><a href="https://www.stats.gov.sa/ar/statistics" target="_blank" rel="noopener">المنهجية والجودة كاملة على صفحة المؤشر <span aria-hidden="true">←</span></a></div>';
+  panel.innerHTML='<div class="methodology-minimal-summary"><p>يقيس الرقم القياسي تغير أسعار الصفقات العقارية المسجلة موزعة على ثلاثة قطاعات — سكني وتجاري وزراعي — ومرجحة بأوزان الصفقات، وسنة الأساس 2023 = 100.</p><a class="publication-clear-link" href="https://azghamdi.github.io/indicator/" target="_blank" rel="noopener noreferrer">المنهجية والجودة كاملة على صفحة المؤشر <span aria-hidden="true">←</span></a></div>';
   return true;
  }
  function run(){if(!replaceMethodologyContent())setTimeout(run,100)}
@@ -5842,6 +5842,12 @@ body .publication-tabs .publication-tab.is-active .newsletter-tab-icon{backgroun
  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
 })();
 </script>
+<style id="publication-clear-links-style">
+.publication-clear-link{display:inline-flex;align-items:center;gap:7px;color:#087a4d!important;font-weight:800!important;text-decoration:underline!important;text-decoration-thickness:1px!important;text-underline-offset:5px!important;border-radius:6px;padding:3px 5px;transition:background-color .16s ease,color .16s ease!important}
+.publication-clear-link span[aria-hidden="true"]{font-size:1.05em;transition:transform .16s ease}
+.publication-clear-link:hover,.publication-clear-link:focus-visible{background:#eaf6f0!important;color:#075c43!important;text-decoration-thickness:2px!important;outline:3px solid transparent}
+.publication-clear-link:hover span[aria-hidden="true"],.publication-clear-link:focus-visible span[aria-hidden="true"]{transform:translateX(-3px)}
+</style>
 </body>
 <style id="cross-device-compatibility-v1">
 /* Final cross-device hardening: phones, tablets, laptops and wide screens. */
