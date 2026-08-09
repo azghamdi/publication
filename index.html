@@ -5885,6 +5885,103 @@ html,body{max-width:100%;overflow-x:clip}
   .key-result-v1__number strong{font-size:clamp(2.1rem,14vw,3rem)!important}
 }
 </style>
+<style id="publication-mobile-chart-export-fix">
+@media (max-width:800px){
+  /* Keep the newsletter chart inside its card without widening the page. */
+  .compact-data-view,
+  .compact-data-view [data-data-panel],
+  .compact-bar-chart{
+    width:100%!important;
+    max-width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+    overflow:hidden!important;
+  }
+  .compact-bar-chart{
+    padding:6px 0 12px!important;
+    gap:8px!important;
+  }
+  .compact-bar-chart__row{
+    width:100%!important;
+    min-width:0!important;
+    box-sizing:border-box!important;
+    grid-template-columns:52px minmax(0,1fr) 78px!important;
+    gap:6px!important;
+    padding:5px 2px!important;
+    transform:none!important;
+  }
+  .compact-bar-chart__track{
+    width:100%!important;
+    min-width:0!important;
+  }
+  .compact-bar-chart__label{
+    min-width:0!important;
+    overflow-wrap:anywhere!important;
+    font-size:.72rem!important;
+    line-height:1.35!important;
+  }
+  .compact-bar-chart__value{
+    white-space:nowrap!important;
+    font-size:.76rem!important;
+  }
+
+  /* Export actions stay compact on mobile instead of becoming full-width buttons. */
+  .compact-chart-filters{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    align-items:center!important;
+    justify-content:flex-start!important;
+    gap:6px!important;
+    width:100%!important;
+  }
+  .compact-chart-filters__group{
+    display:flex!important;
+    flex-wrap:wrap!important;
+    gap:6px!important;
+    width:100%!important;
+  }
+  .compact-chart-filter,
+  .compact-chart-filter--export,
+  [data-export-chart],
+  [data-export-excel]{
+    width:auto!important;
+    min-width:0!important;
+    max-width:100%!important;
+    min-height:34px!important;
+    height:34px!important;
+    padding:5px 9px!important;
+    border-radius:7px!important;
+    font-size:.72rem!important;
+    line-height:1!important;
+    flex:0 0 auto!important;
+  }
+  .compact-chart-filter--export svg,
+  [data-export-chart] svg,
+  [data-export-excel] svg{
+    width:15px!important;
+    height:15px!important;
+    flex:0 0 15px!important;
+  }
+  .compact-data-view__title{
+    font-size:.86rem!important;
+    line-height:1.55!important;
+    overflow-wrap:anywhere!important;
+  }
+}
+@media (max-width:380px){
+  .compact-bar-chart__row{
+    grid-template-columns:48px minmax(0,1fr) 68px!important;
+    gap:4px!important;
+  }
+  .compact-chart-filter,
+  .compact-chart-filter--export,
+  [data-export-chart],
+  [data-export-excel]{
+    padding-inline:7px!important;
+    font-size:.68rem!important;
+  }
+}
+</style>
 </body>
 <style id="cross-device-compatibility-v1">
 /* Final cross-device hardening: phones, tablets, laptops and wide screens. */
