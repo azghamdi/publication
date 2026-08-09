@@ -5848,6 +5848,43 @@ body .publication-tabs .publication-tab.is-active .newsletter-tab-icon{backgroun
 .publication-clear-link:hover,.publication-clear-link:focus-visible{background:#eaf6f0!important;color:#075c43!important;text-decoration-thickness:2px!important;outline:3px solid transparent}
 .publication-clear-link:hover span[aria-hidden="true"],.publication-clear-link:focus-visible span[aria-hidden="true"]{transform:translateX(-3px)}
 </style>
+<style id="publication-mobile-hardening-final">
+html,body{max-width:100%;overflow-x:clip}
+.compact-publication-hero,.key-result-v1,.publication-accordion__item,.publication-accordion__panel,.imported-release,.imported-release__section,.imported-release__chart-card{box-sizing:border-box;min-width:0;max-width:100%}
+.chart-table-scroll,.publication-table-wrap,.table-scroll,.imported-release__table-wrap{max-width:100%;overflow-x:auto!important;overflow-y:hidden;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain}
+.publication-tabs__inner{max-width:100%;overflow-x:auto!important;-webkit-overflow-scrolling:touch;overscroll-behavior-inline:contain;scrollbar-width:thin}
+.publication-tab{flex:0 0 auto}
+.publication-accordion__label,.publication-accordion__label>span:last-child{min-width:0;overflow-wrap:anywhere}
+@media(max-width:800px){
+  .compact-publication-hero__title{font-size:clamp(1.55rem,7vw,2.1rem)!important;line-height:1.45!important;overflow-wrap:anywhere}
+  .compact-publication-hero__product,.compact-publication-hero__subtitle,.compact-publication-hero__meta{overflow-wrap:anywhere}
+  .compact-publication-hero__actions{width:100%;display:grid!important;grid-template-columns:1fr 1fr!important;gap:8px!important}
+  .compact-publication-hero__button{width:100%;justify-content:center!important}
+  .key-result-v1__body,.key-result-v1__details{display:grid!important;grid-template-columns:1fr!important;width:100%!important}
+  .key-result-v1__copy,.key-result-v1__number,.key-result-v1__metric{width:100%!important;min-width:0!important}
+  .publication-accordion__trigger{min-height:58px!important;padding:10px 13px!important;gap:9px!important}
+  .publication-accordion__label{font-size:.96rem!important}
+  .publication-accordion__label-icon,.newsletter-tab-icon{flex-shrink:0}
+  .publication-accordion__panel{padding-inline:11px!important;overflow-x:hidden}
+  #tables svg,.publication-chart svg,.imported-release__chart-wrap svg,.interactive-chart svg{display:block;width:100%!important;max-width:100%!important;height:auto!important;overflow:hidden!important}
+  .chart-table-scroll table,.publication-table-wrap table,.table-scroll table,.imported-release__table-wrap table{min-width:680px;font-size:.82rem}
+  .chart-table-scroll th,.chart-table-scroll td,.publication-table-wrap th,.publication-table-wrap td,.table-scroll th,.table-scroll td{padding:9px 10px!important;white-space:nowrap}
+  .chart-controls,.chart-filters,.data-filters,.publication-view-switch{width:100%;display:grid!important;grid-template-columns:1fr!important;gap:7px!important}
+  .chart-controls button,.chart-filters button,.data-filters button,.publication-view-switch button{width:100%;min-height:42px}
+  .publication-toolbar,.publication-toolbar__inner,.publication-toolbar__actions{width:100%!important;max-width:100%!important}
+  .publication-toolbar__actions{display:grid!important;grid-template-columns:1fr!important;gap:8px!important}
+  .publication-action,.publication-export,.publication-share,.publication-share-button,.publication-export__toggle{width:100%!important;justify-content:center!important}
+  .methodology-minimal-summary,.compact-citation__body,.citation-card{max-width:100%;overflow-wrap:anywhere}
+}
+@media(max-width:480px){
+  .compact-publication-hero__actions{grid-template-columns:1fr!important}
+  .publication-tab{padding-inline:9px!important;font-size:.79rem!important}
+  .newsletter-tab-icon{width:27px!important;height:27px!important}
+  .publication-accordion__trigger{min-height:54px!important;padding:9px 11px!important}
+  .publication-accordion__panel{padding:10px!important}
+  .key-result-v1__number strong{font-size:clamp(2.1rem,14vw,3rem)!important}
+}
+</style>
 </body>
 <style id="cross-device-compatibility-v1">
 /* Final cross-device hardening: phones, tablets, laptops and wide screens. */
