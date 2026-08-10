@@ -6003,6 +6003,17 @@ html,body{max-width:100%;overflow-x:clip}
   }
 }
 </style>
+<script id="statistics-nav-label-fix">
+(()=>{
+  const updateStatisticsLabels=()=>{
+    const desktop=document.querySelector('#goh-official-nav .goh__item--statistics-sections > .goh__trigger');
+    const mobile=document.querySelector('#goh-official-nav .goh__mobile-item--statistics-sections > .goh__mobile-trigger > span:first-child');
+    if(desktop){desktop.childNodes[0].nodeValue='الإحصاءات ';desktop.setAttribute('aria-label','الإحصاءات')}
+    if(mobile)mobile.textContent='الإحصاءات';
+  };
+  document.readyState==='loading'?document.addEventListener('DOMContentLoaded',updateStatisticsLabels,{once:true}):updateStatisticsLabels();
+})();
+</script>
 </body>
 <style id="cross-device-compatibility-v1">
 /* Final cross-device hardening: phones, tablets, laptops and wide screens. */
