@@ -8039,4 +8039,57 @@ html body #compactCitation > .compact-citation__trigger:hover .citation-unified-
 }
 .citation-rebuilt__body[hidden]{display:none!important}
 </style>
+<style id="newsletter-tables-mobile-opening-fix">
+/* The view switch already explains the content; avoid repeating this caption. */
+#tablesPanel .compact-data-view__top > p{display:none!important}
+#tablesPanel .compact-data-view__top{justify-content:flex-end!important}
+@media(max-width:700px){
+  #tablesPanel .compact-data-view__top{margin-bottom:10px!important}
+}
+</style>
+<script id="newsletter-tables-mobile-opening-fix-script">
+(function(){
+  function installTablesMobileFix(){
+    var section=document.getElementById('tables');
+    if(!section)return false;
+    var trigger=section.querySelector(':scope > .publication-accordion__trigger');
+    var panel=document.getElementById(trigger&&trigger.getAttribute('aria-controls'))||document.getElementById('tablesPanel');
+    if(!trigger||!panel||trigger.dataset.mobileOpeningFixed==='true')return !!trigger;
+    trigger.dataset.mobileOpeningFixed='true';
+
+    trigger.addEventListener('click',function(event){
+      if(!window.matchMedia('(max-width:700px)').matches)return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+
+      var savedX=window.scrollX;
+      var savedY=window.scrollY;
+      var willOpen=trigger.getAttribute('aria-expanded')!=='true';
+
+      if(willOpen){
+        document.querySelectorAll('.publication-accordion__item > .publication-accordion__trigger[aria-expanded="true"]').forEach(function(other){
+          if(other===trigger)return;
+          var otherPanel=document.getElementById(other.getAttribute('aria-controls'));
+          other.setAttribute('aria-expanded','false');
+          if(otherPanel){otherPanel.hidden=true;otherPanel.setAttribute('aria-hidden','true')}
+        });
+      }
+
+      trigger.setAttribute('aria-expanded',willOpen?'true':'false');
+      panel.hidden=!willOpen;
+      panel.setAttribute('aria-hidden',willOpen?'false':'true');
+
+      /* Opening the card must not move the user to the footer. */
+      window.scrollTo(savedX,savedY);
+      requestAnimationFrame(function(){window.scrollTo(savedX,savedY)});
+      setTimeout(function(){window.scrollTo(savedX,savedY)},120);
+    },true);
+    return true;
+  }
+  if(!installTablesMobileFix()){
+    document.addEventListener('DOMContentLoaded',installTablesMobileFix,{once:true});
+    new MutationObserver(function(_,observer){if(installTablesMobileFix())observer.disconnect()}).observe(document.documentElement,{childList:true,subtree:true});
+  }
+})();
+</script>
 </html>
