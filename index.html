@@ -3397,7 +3397,7 @@ body.metadata-dialog-open .publication-tabs{z-index:900!important}
 <div class="publication-toolbar__actions">
 <button class="publication-action publication-action--results" type="button" data-publication-target="dashboards"><span>استعرض النتائج</span></button>
 
-<a aria-label="الرجوع إلى النشرات السابقة" class="publication-action publication-action--previous" href="https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&amp;category=121920">
+<a aria-label="الرجوع إلى النشرات السابقة" class="publication-action publication-action--previous" href="https://azghamdi.github.io/releases-archive/">
 <svg aria-hidden="true" fill="none" viewbox="0 0 24 24">
 <path d="M9 7 4 12l5 5M5 12h9a5 5 0 0 1 5 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path>
 </svg>
@@ -5291,7 +5291,7 @@ document.addEventListener("DOMContentLoaded",function(){
   hero.innerHTML='<div class="compact-publication-hero__content"></div><div class="compact-publication-hero__actions"><button class="compact-publication-hero__button compact-publication-hero__button--share" type="button" data-hero-share><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.5M8.2 13.2l7.6 4.5"/></svg><span>مشاركة</span></button><button class="compact-publication-hero__button" type="button" data-hero-print><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 8V4h10v4M7 17H5a2 2 0 0 1-2-2v-5h18v5a2 2 0 0 1-2 2h-2M7 14h10v6H7z"/></svg><span>طباعة</span></button></div>';
   var content=hero.querySelector('.compact-publication-hero__content');
   if(path)content.appendChild(path);
-content.insertAdjacentHTML('beforeend','<h1 class="compact-publication-hero__title">الرقم القياسي لأسعار العقارات – الربع الثاني 2026</h1><p class="compact-publication-hero__product"><a class="publication-clear-link" href="https://azghamdi.github.io/indicator/" target="_blank" rel="noopener noreferrer">صفحة المؤشر: الرقم القياسي لأسعار العقارات <span aria-hidden="true">←</span></a></p><div class="compact-publication-hero__meta"><span>تاريخ النشر: 20 يوليو 2026، الساعة 9:00 صباحًا</span><span>النشرة القادمة: 20 أكتوبر 2026 — الربع الثالث 2026</span><span>تحديث ربع سنوي</span><a class="compact-publication-hero__previous" href="https://www.stats.gov.sa/ar/statistics-tabs?tab=436312&amp;category=121920"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M5 12h9a5 5 0 0 1 5 5"/></svg><span>الرجوع للنشرات السابقة</span></a></div>');
+content.insertAdjacentHTML('beforeend','<h1 class="compact-publication-hero__title">الرقم القياسي لأسعار العقارات – الربع الثاني 2026</h1><div class="compact-publication-hero__meta"><span>تاريخ النشر: 20 يوليو 2026، الساعة 9:00 صباحًا</span><span>النشرة القادمة: 20 أكتوبر 2026 — الربع الثالث 2026</span><span>تحديث ربع سنوي</span><a class="compact-publication-hero__previous" href="https://azghamdi.github.io/releases-archive/"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7 4 12l5 5M5 12h9a5 5 0 0 1 5 5"/></svg><span>الرجوع للنشرات السابقة</span></a></div>');
   container.appendChild(hero);
   hero.querySelector('[data-hero-print]').addEventListener('click',function(){window.print()});
   hero.querySelector('[data-hero-share]').addEventListener('click',function(){
@@ -8144,6 +8144,213 @@ html body #compactCitation > .compact-citation__trigger:hover .citation-unified-
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',updateTitle,{once:true});else updateTitle();
 })();
 </script>
+<style id="newsletter-indicators-embedded-tab-style">
+#indicators{order:99!important}
+#relatedTopics{order:100!important;width:100%!important;margin:8px 0 0!important;padding:18px 0 4px!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;overflow:visible!important}
+#relatedTopics .related-topics-heading{display:flex!important;align-items:center;gap:10px;margin:0 0 16px!important;padding:0 4px!important;color:#087a4d!important;font-size:1.35rem!important;line-height:1.5!important;font-weight:800!important}
+#relatedTopics .related-topics-heading::before{content:"";display:block;width:4px;height:25px;border-radius:4px;background:#148357}
+#indicators .newsletter-indicators-frame-wrap{padding:0!important;overflow:hidden;background:#fff}
+#indicators .newsletter-indicators-frame{display:block;width:100%;min-height:320px;border:0;background:#fff}
+#indicators .publication-accordion__label-icon svg{fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+#relatedTopics .related-topics-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#relatedTopics .related-topic-link{position:relative;min-height:88px;padding:15px 62px 15px 44px;border:1px solid #d7e6de;border-radius:12px;background:#fff;color:#173f30;text-decoration:none;display:flex;flex-direction:column;justify-content:center;gap:4px;box-shadow:0 3px 10px rgba(18,63,44,.035);transition:border-color .18s ease,background-color .18s ease,transform .18s ease,box-shadow .18s ease}
+#relatedTopics .related-topic-link::before{content:"";position:absolute;right:16px;top:50%;width:34px;height:34px;border-radius:10px;background:#e5f4ec center/19px no-repeat;transform:translateY(-50%);box-shadow:inset 0 0 0 1px #cfe5da}
+#relatedTopics .related-topic-link:nth-child(1)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23148357' stroke-width='1.8' stroke-linecap='round'%3E%3Cpath d='M4 18V9M10 18V5M16 18v-6M22 18V3'/%3E%3C/svg%3E")}
+#relatedTopics .related-topic-link:nth-child(2)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23148357' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 19h16M6 16l4-5 3 3 5-7'/%3E%3C/svg%3E")}
+#relatedTopics .related-topic-link:nth-child(3)::before{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23148357' stroke-width='1.8'%3E%3Cpath d='M4 20V10h4v10M10 20V5h4v15M16 20v-8h4v8M3 20h18'/%3E%3C/svg%3E")}
+#relatedTopics .related-topic-link::after{content:"←";position:absolute;left:17px;top:50%;color:#148357;font-size:1.05rem;transform:translateY(-50%);transition:transform .18s ease}
+#relatedTopics .related-topic-link strong{font-size:.96rem;color:#075f3d}
+#relatedTopics .related-topic-link span{color:#667a70;font-size:.8rem}
+#relatedTopics .related-topic-link:hover,#relatedTopics .related-topic-link:focus-visible{border-color:#79b998;background:#f0f9f4;transform:translateY(-2px);box-shadow:0 8px 18px rgba(18,99,63,.09);outline:none}
+#relatedTopics .related-topic-link:hover::after,#relatedTopics .related-topic-link:focus-visible::after{transform:translate(-3px,-50%)}
+@media(max-width:700px){#indicators .newsletter-indicators-frame{min-height:420px}#relatedTopics{padding-top:12px!important}#relatedTopics .related-topics-heading{font-size:1.12rem!important;margin-bottom:11px!important}#relatedTopics .related-topics-grid{grid-template-columns:1fr;gap:9px}#relatedTopics .related-topic-link{min-height:74px;padding-block:12px}}
+</style>
+<script id="newsletter-indicators-embedded-tab-script">
+(function(){
+  function closeOtherCards(keep){
+    document.querySelectorAll('.publication-accordion__item>.publication-accordion__trigger[aria-expanded="true"]').forEach(function(trigger){
+      if(trigger===keep)return;
+      trigger.setAttribute('aria-expanded','false');
+      var panel=document.getElementById(trigger.getAttribute('aria-controls'));
+      if(panel){panel.hidden=true;panel.setAttribute('aria-hidden','true')}
+      var card=trigger.closest('.publication-accordion__item');if(card)card.classList.remove('is-open');
+    });
+  }
+  function build(){
+    if(document.getElementById('indicators'))return true;
+    var overview=document.getElementById('overview');
+    var tabs=document.querySelector('.publication-tabs__inner');
+    if(!overview||!overview.parentElement||!tabs)return false;
+    var section=document.createElement('section');
+    section.id='indicators';
+    section.className='publication-accordion__item publication-accordion__item--secondary';
+    section.innerHTML='<button class="publication-accordion__trigger" type="button" aria-expanded="false" aria-controls="indicatorsPanel"><span class="publication-accordion__label"><span class="publication-accordion__label-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5V10m5 9.5V5m6 14.5v-7m5 7V8"/></svg></span><span>المؤشرات</span></span><span class="publication-accordion__icon" aria-hidden="true"></span></button><div class="publication-accordion__panel newsletter-indicators-frame-wrap" id="indicatorsPanel" hidden aria-hidden="true"><iframe class="newsletter-indicators-frame" title="مؤشرات الرقم القياسي لأسعار العقارات" loading="lazy" data-src="المؤشر/index.html?embed=11"></iframe></div>';
+    overview.insertAdjacentElement('afterend',section);
+    var related=document.createElement('section');
+    related.id='relatedTopics';related.className='newsletter-related-releases';
+    related.innerHTML='<h2 class="related-topics-heading">إصدارات ذات علاقة</h2><div class="related-topics-grid"><a class="related-topic-link" href="https://www.stats.gov.sa/ar/statistics" target="_blank" rel="noopener noreferrer"><strong>الرقم القياسي لأسعار المستهلك</strong><span>شهري · الأسعار</span></a><a class="related-topic-link" href="https://www.stats.gov.sa/ar/statistics" target="_blank" rel="noopener noreferrer"><strong>الرقم القياسي لأسعار الجملة</strong><span>شهري · الأسعار</span></a><a class="related-topic-link" href="https://www.stats.gov.sa/ar/statistics" target="_blank" rel="noopener noreferrer"><strong>الناتج المحلي الإجمالي</strong><span>ربع سنوي · الحسابات القومية</span></a></div>';
+    section.insertAdjacentElement('afterend',related);
+    var overviewTab=tabs.querySelector('[data-target="overview"]');
+    var citationTab=tabs.querySelector('[data-target="compactCitation"]');
+    var tab=document.createElement('button');tab.type='button';tab.className='publication-tab';tab.dataset.target='indicators';tab.innerHTML='<span class="publication-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5V10m5 9.5V5m6 14.5v-7m5 7V8"/></svg></span><span>المؤشرات</span>';
+    if(citationTab)citationTab.insertAdjacentElement('afterend',tab);else if(overviewTab)overviewTab.insertAdjacentElement('afterend',tab);else tabs.appendChild(tab);
+    var trigger=section.querySelector('.publication-accordion__trigger'),panel=section.querySelector('#indicatorsPanel'),frame=section.querySelector('iframe');
+    function openIndicators(){
+      closeOtherCards(trigger);trigger.setAttribute('aria-expanded','true');panel.hidden=false;panel.setAttribute('aria-hidden','false');section.classList.add('is-open');
+      if(!frame.src)frame.src=frame.dataset.src;
+      document.querySelectorAll('.publication-tab').forEach(function(item){item.classList.toggle('is-active',item===tab);if(item===tab)item.setAttribute('aria-current','page');else item.removeAttribute('aria-current')});
+    }
+    trigger.addEventListener('click',function(){var opening=trigger.getAttribute('aria-expanded')!=='true';if(opening)openIndicators();else{trigger.setAttribute('aria-expanded','false');panel.hidden=true;panel.setAttribute('aria-hidden','true');section.classList.remove('is-open')}});
+    tab.addEventListener('click',function(event){event.preventDefault();event.stopImmediatePropagation();openIndicators();setTimeout(function(){section.scrollIntoView({behavior:'smooth',block:'start'})},0)},true);
+    window.addEventListener('message',function(event){if(!event.data||event.data.type!=='gstats-indicator-height')return;var height=Number(event.data.height);if(height>300)frame.style.height=Math.min(height+8,12000)+'px'});
+    return true;
+  }
+  function run(){if(!build())setTimeout(run,30)}
+  run();
+})();
+</script>
+<script id="newsletter-indicators-tab-persistence-script">
+(function(){
+  var watchedTabs=null;
+  function ensureIndicatorsTab(){
+    var tabs=document.querySelector('.publication-tabs__inner');
+    var section=document.getElementById('indicators');
+    if(!tabs||!section)return false;
+    if(!tabs.querySelector('[data-target="indicators"]')){
+      var tab=document.createElement('button');
+      tab.type='button';tab.className='publication-tab';tab.dataset.target='indicators';
+      tab.innerHTML='<span class="publication-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 19.5V10m5 9.5V5m6 14.5v-7m5 7V8"/></svg></span><span>المؤشرات</span>';
+      var citationTab=tabs.querySelector('[data-target="compactCitation"]');
+      if(citationTab)citationTab.insertAdjacentElement('afterend',tab);else tabs.appendChild(tab);
+      tab.addEventListener('click',function(event){
+        event.preventDefault();event.stopImmediatePropagation();
+        var trigger=section.querySelector(':scope > .publication-accordion__trigger');
+        var panel=document.getElementById('indicatorsPanel');
+        var frame=panel&&panel.querySelector('iframe');
+        document.querySelectorAll('.publication-accordion__item>.publication-accordion__trigger[aria-expanded="true"]').forEach(function(other){
+          if(other===trigger)return;
+          other.setAttribute('aria-expanded','false');
+          var otherPanel=document.getElementById(other.getAttribute('aria-controls'));
+          if(otherPanel){otherPanel.hidden=true;otherPanel.setAttribute('aria-hidden','true')}
+          var otherCard=other.closest('.publication-accordion__item');if(otherCard)otherCard.classList.remove('is-open');
+        });
+        if(trigger)trigger.setAttribute('aria-expanded','true');
+        if(panel){panel.hidden=false;panel.setAttribute('aria-hidden','false')}
+        section.classList.add('is-open');
+        if(frame&&!frame.src)frame.src=frame.dataset.src;
+        document.querySelectorAll('.publication-tab').forEach(function(item){item.classList.toggle('is-active',item===tab);if(item===tab)item.setAttribute('aria-current','page');else item.removeAttribute('aria-current')});
+        setTimeout(function(){section.scrollIntoView({behavior:'smooth',block:'start'})},0);
+      },true);
+    }
+    if(watchedTabs!==tabs){
+      watchedTabs=tabs;
+      new MutationObserver(function(){ensureIndicatorsTab()}).observe(tabs,{childList:true});
+    }
+    return true;
+  }
+  document.addEventListener('click',function(event){
+    var tab=event.target.closest&&event.target.closest('.publication-tab[data-target="indicators"]');
+    var directTrigger=event.target.closest&&event.target.closest('#indicators > .publication-accordion__trigger');
+    if(!tab&&!directTrigger)return;
+    event.preventDefault();event.stopImmediatePropagation();
+    var section=document.getElementById('indicators');
+    var trigger=section&&section.querySelector(':scope > .publication-accordion__trigger');
+    var panel=document.getElementById('indicatorsPanel');
+    var frame=panel&&panel.querySelector('iframe');
+    if(!section||!trigger||!panel)return;
+    var shouldOpen=!!tab||trigger.getAttribute('aria-expanded')!=='true';
+    if(!shouldOpen){
+      trigger.setAttribute('aria-expanded','false');
+      panel.hidden=true;panel.setAttribute('aria-hidden','true');section.classList.remove('is-open');
+      return;
+    }
+    document.querySelectorAll('.publication-accordion__item>.publication-accordion__trigger[aria-expanded="true"]').forEach(function(other){
+      if(other===trigger)return;
+      other.setAttribute('aria-expanded','false');
+      var otherPanel=document.getElementById(other.getAttribute('aria-controls'));
+      if(otherPanel){otherPanel.hidden=true;otherPanel.setAttribute('aria-hidden','true')}
+      var otherCard=other.closest('.publication-accordion__item');if(otherCard)otherCard.classList.remove('is-open');
+    });
+    trigger.setAttribute('aria-expanded','true');
+    panel.hidden=false;panel.setAttribute('aria-hidden','false');section.classList.add('is-open');
+    if(frame&&!frame.src)frame.src=frame.dataset.src;
+    var activeTab=tab||document.querySelector('.publication-tab[data-target="indicators"]');
+    document.querySelectorAll('.publication-tab').forEach(function(item){item.classList.toggle('is-active',item===activeTab);if(item===activeTab)item.setAttribute('aria-current','page');else item.removeAttribute('aria-current')});
+    setTimeout(function(){section.scrollIntoView({behavior:'smooth',block:'start'})},0);
+  },true);
+  function start(){if(!ensureIndicatorsTab())setTimeout(start,30)}
+  start();
+})();
+</script>
+<style id="newsletter-hero-organized-layout-final">
+.publication-context .compact-publication-hero{
+  width:min(1180px,calc(100% - 40px))!important;
+  margin-inline:auto!important;
+  padding:28px 0 24px!important;
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  grid-template-areas:
+    "content content"
+    "meta actions"!important;
+  column-gap:24px!important;
+  row-gap:16px!important;
+  align-items:center!important;
+}
+.compact-publication-hero__content{
+  grid-area:content!important;
+  min-width:0!important;
+}
+.compact-publication-hero__actions{
+  grid-area:actions!important;
+  align-self:end!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  gap:10px!important;
+  margin:0!important;
+}
+.compact-publication-hero__title{
+  max-width:100%!important;
+  margin:10px 0 8px!important;
+  font-size:clamp(2rem,3.1vw,2.9rem)!important;
+  line-height:1.35!important;
+  letter-spacing:-.02em!important;
+}
+.compact-publication-hero__meta{
+  grid-area:meta!important;
+  display:flex!important;
+  align-items:center!important;
+  flex-wrap:wrap!important;
+  gap:8px 18px!important;
+  margin:0!important;
+  align-self:center!important;
+}
+.compact-publication-hero__breadcrumbs{
+  margin-bottom:4px!important;
+  font-size:.86rem!important;
+}
+.compact-publication-hero__actions .compact-action{
+  min-height:46px!important;
+  padding:9px 16px!important;
+}
+@media(max-width:900px){
+  .publication-context .compact-publication-hero{
+    width:calc(100% - 28px)!important;
+    grid-template-columns:1fr!important;
+    grid-template-areas:"content" "meta" "actions"!important;
+    gap:14px!important;
+    padding:22px 0!important;
+  }
+  .compact-publication-hero__title{font-size:clamp(1.75rem,6vw,2.45rem)!important}
+  .compact-publication-hero__actions{justify-content:flex-start!important}
+}
+@media(max-width:560px){
+  .publication-context .compact-publication-hero{width:calc(100% - 22px)!important;padding:18px 0!important}
+  .compact-publication-hero__meta{display:grid!important;grid-template-columns:1fr!important;gap:6px!important}
+  .compact-publication-hero__actions{display:grid!important;grid-template-columns:1fr 1fr!important;width:100%!important}
+  .compact-publication-hero__actions>*{width:100%!important;justify-content:center!important}
+}
+</style>
 <script id="newsletter-tables-mobile-opening-fix-script">
 (function(){
   function installTablesMobileFix(){
