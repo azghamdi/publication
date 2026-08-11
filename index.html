@@ -5462,18 +5462,6 @@ content.insertAdjacentHTML('beforeend','<h1 class="compact-publication-hero__tit
 #methodologyPanel>.methodology-minimal-summary p{margin:0!important}
 #methodologyPanel>.methodology-minimal-summary a{margin-top:4px!important}
 </style>
-<script id="methodology-minimal-summary-script">
-(function(){
- function replaceMethodologyContent(){
-  var panel=document.getElementById('methodologyPanel');
-  if(!panel)return false;
-  panel.innerHTML='<div class="methodology-minimal-summary"><p>يقيس الرقم القياسي تغير أسعار الصفقات العقارية المسجلة موزعة على ثلاثة قطاعات — سكني وتجاري وزراعي — ومرجحة بأوزان الصفقات، وسنة الأساس 2023 = 100.</p><a class="publication-clear-link" href="https://azghamdi.github.io/indicator/" target="_blank" rel="noopener noreferrer">المنهجية والجودة كاملة على صفحة المؤشر <span aria-hidden="true">←</span></a></div>';
-  return true;
- }
- function run(){if(!replaceMethodologyContent())setTimeout(run,100)}
- if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',function(){setTimeout(run,60)},{once:true});else setTimeout(run,60);
-})();
-</script>
 <style id="compact-data-chart-table-style">
 .compact-data-view{padding:18px;background:#fff}
 .compact-data-view__top{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
